@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var dates = [Date]()
     @ObservedObject var viewModel = VideoListViewModel()
     @ObservedObject var downloadModel = VideoDownloadViewModel()
-
     
     var body: some View {
         NavigationView {
@@ -42,7 +41,14 @@ struct DetailView: View {
     }
     
     func action(video: Video){
-        downloadModel.download(video: video)
+        guard let state = self.downloadModel.states[video] else{
+            downloadModel.download(video: video)
+            return
+        }
+        
+        if state == .loading{
+            downloadModel.cancel(video: video)
+        }
     }
 
     var body: some View {
@@ -54,12 +60,22 @@ struct DetailView: View {
                 Spacer()
             }.padding(.top, 140)
             }.navigationBarTitle(Text("")).navigationBarItems(trailing:
-                HStack{ Button("Download Video") {
+                HStack{ Button(loadTitle(video: video)) {
                     self.action(video: self.video)
                     }; Image(systemName: "square.and.arrow.down")
                 }
             ).edgesIgnoringSafeArea([.top, .bottom])
     }
+    
+    
+    func loadTitle(video: Video) -> String{
+        guard let state = self.downloadModel.states[video] else{
+            return "Download Video"
+        }
+        
+        return state.title()
+    }
+    
 }
 
 

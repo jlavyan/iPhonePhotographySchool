@@ -8,6 +8,7 @@
 
 import Alamofire
 import RxSwift
+import Reachability
 
 enum VideoRepositoryError: Error {
     case notFound // 404
@@ -17,12 +18,18 @@ enum VideoRepositoryError: Error {
 class VideoRepository: Repository{
     
     final var api: String
+
     init(api: String = "videos"){
         self.api = api
     }
     
     func videoList() -> Observable<[Video]>{
-        return loadOffline()
+        let isReachable = try? Reachability.init().connection != .unavailable
+        if isReachable == true{
+            return loadOnline()
+        }else{
+            return loadOffline()
+        }
     }
 
     private func loadOnline() -> Observable<[Video]>{

@@ -8,6 +8,7 @@ target 'Video' do
   pod 'RxCocoa', '~> 5'
   pod 'SDWebImage'
   pod 'SDWebImageSwiftUI'
+  pod 'ReachabilitySwift',  '~> 5.0.0'
 
 end
 
