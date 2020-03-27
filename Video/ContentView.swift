@@ -11,13 +11,15 @@ import SwiftUI
 struct ContentView: View {
     @State private var dates = [Date]()
     @ObservedObject var viewModel = VideoListViewModel()
+    @ObservedObject var downloadModel = VideoDownloadViewModel()
 
+    
     var body: some View {
         NavigationView {
             VStack {
                 List(viewModel.videos) {video in
                     NavigationLink(
-                        destination: DetailView(video: video)
+                        destination: DetailView(video: video, downloadModel: self.downloadModel)
                     ) {
                         VideoRow(viewModel: self.viewModel, video: video)
                             .onAppear {
@@ -31,13 +33,16 @@ struct ContentView: View {
 }
 
 struct DetailView: View {
+    @ObservedObject var downloadModel: VideoDownloadViewModel;
+
     var video: Video
-    init(video: Video){
+    init(video: Video, downloadModel: VideoDownloadViewModel){
         self.video = video
+        self.downloadModel = downloadModel
     }
     
-    func action(){
-        
+    func action(video: Video){
+        downloadModel.download(video: video)
     }
 
     var body: some View {
@@ -50,7 +55,7 @@ struct DetailView: View {
             }.padding(.top, 140)
             }.navigationBarTitle(Text("")).navigationBarItems(trailing:
                 HStack{ Button("Download Video") {
-                    self.action()
+                    self.action(video: self.video)
                     }; Image(systemName: "square.and.arrow.down")
                 }
             ).edgesIgnoringSafeArea([.top, .bottom])

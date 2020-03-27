@@ -32,8 +32,7 @@ final class VideoListViewModel: ObservableObject {
             // TODO: make actions for different error
         })
         .disposed(by: disposeBag)
-
-
     }
+    
 
 }
