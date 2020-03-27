@@ -30,7 +30,7 @@ class Downloader: NSObject, AVAssetDownloadDelegate{
         if let url = URL(string: video.videoLink){
 
         self.hslion = HLSion(url: url, name: String(video.id)).download { (progressPercentage) in
-            print(progressPercentage)
+            print("Downloaded progress: \(progressPercentage)")
         }.finish { (relativePath) in
             Database.saveVideoPath(id: video.videoLink, path: relativePath)
             observer.onNext(video.videoLink)
