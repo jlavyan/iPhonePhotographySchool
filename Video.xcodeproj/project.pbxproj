@@ -19,7 +19,6 @@
 		20C9ED4E242E4EE200784FCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C9ED4D242E4EE200784FCC /* Preview Assets.xcassets */; };
 		20C9ED51242E4EE200784FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C9ED4F242E4EE200784FCC /* LaunchScreen.storyboard */; };
 		20C9ED5C242E4EE200784FCC /* VideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED5B242E4EE200784FCC /* VideoTests.swift */; };
-		20C9ED67242E4EE200784FCC /* VideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED66242E4EE200784FCC /* VideoUITests.swift */; };
 		20C9ED78242E504000784FCC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED77242E504000784FCC /* Video.swift */; };
 		20C9ED7B242E53DD00784FCC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED7A242E53DD00784FCC /* Repository.swift */; };
 		20C9ED7D242E53EA00784FCC /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED7C242E53EA00784FCC /* VideoRepository.swift */; };
@@ -28,6 +27,7 @@
 		20C9ED87242E752F00784FCC /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED86242E752F00784FCC /* Database.swift */; };
 		20C9ED89242E7A3700784FCC /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED88242E7A3700784FCC /* VideoView.swift */; };
 		20C9ED8B242E7AA100784FCC /* PlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED8A242E7AA100784FCC /* PlayerUIView.swift */; };
+		8261912588318AEBD7735B5F /* libPods-VideoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14161FA4E4EF40B96612BF26 /* libPods-VideoTests.a */; };
 		FC37F8151A0F1300ECB09794 /* libPods-Video.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCCF43C91CBC66E7CFB5939 /* libPods-Video.a */; };
 /* End PBXBuildFile section */
 
@@ -39,16 +39,10 @@
 			remoteGlobalIDString = 20C9ED40242E4EE000784FCC;
 			remoteInfo = Video;
 		};
-		20C9ED63242E4EE200784FCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20C9ED39242E4EE000784FCC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20C9ED40242E4EE000784FCC;
-			remoteInfo = Video;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14161FA4E4EF40B96612BF26 /* libPods-VideoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VideoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCCF43C91CBC66E7CFB5939 /* libPods-Video.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Video.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B0A31D242E871700B04044 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		20B0A31F242E879600B04044 /* VideoDownloadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDownloadModel.swift; sourceTree = "<group>"; };
@@ -66,9 +60,6 @@
 		20C9ED57242E4EE200784FCC /* VideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C9ED5B242E4EE200784FCC /* VideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTests.swift; sourceTree = "<group>"; };
 		20C9ED5D242E4EE200784FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20C9ED62242E4EE200784FCC /* VideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C9ED66242E4EE200784FCC /* VideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUITests.swift; sourceTree = "<group>"; };
-		20C9ED68242E4EE200784FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C9ED77242E504000784FCC /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		20C9ED7A242E53DD00784FCC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		20C9ED7C242E53EA00784FCC /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
@@ -77,8 +68,10 @@
 		20C9ED86242E752F00784FCC /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		20C9ED88242E7A3700784FCC /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		20C9ED8A242E7AA100784FCC /* PlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIView.swift; sourceTree = "<group>"; };
+		739D573B31AC4DB148FD0C13 /* Pods-VideoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoTests/Pods-VideoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		75FA6BDA0F5BB1530A0143A0 /* Pods-Video.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video.release.xcconfig"; path = "Target Support Files/Pods-Video/Pods-Video.release.xcconfig"; sourceTree = "<group>"; };
 		8A41F4F9CC7E6AF288B173DB /* Pods-Video.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video.debug.xcconfig"; path = "Target Support Files/Pods-Video/Pods-Video.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF1E0D3CE181189CEE50A8F /* Pods-VideoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTests.release.xcconfig"; path = "Target Support Files/Pods-VideoTests/Pods-VideoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C9ED5F242E4EE200784FCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8261912588318AEBD7735B5F /* libPods-VideoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +109,6 @@
 			children = (
 				20C9ED43242E4EE000784FCC /* Video */,
 				20C9ED5A242E4EE200784FCC /* VideoTests */,
-				20C9ED65242E4EE200784FCC /* VideoUITests */,
 				20C9ED42242E4EE000784FCC /* Products */,
 				6108FC59478FFE5B22649C73 /* Pods */,
 				B6E7070FFEF3DDFEF2DBE361 /* Frameworks */,
@@ -134,7 +120,6 @@
 			children = (
 				20C9ED41242E4EE000784FCC /* Video.app */,
 				20C9ED57242E4EE200784FCC /* VideoTests.xctest */,
-				20C9ED62242E4EE200784FCC /* VideoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,15 +157,6 @@
 				20C9ED5D242E4EE200784FCC /* Info.plist */,
 			);
 			path = VideoTests;
-			sourceTree = "<group>";
-		};
-		20C9ED65242E4EE200784FCC /* VideoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				20C9ED66242E4EE200784FCC /* VideoUITests.swift */,
-				20C9ED68242E4EE200784FCC /* Info.plist */,
-			);
-			path = VideoUITests;
 			sourceTree = "<group>";
 		};
 		20C9ED74242E4FE900784FCC /* Models */ = {
@@ -227,6 +203,8 @@
 			children = (
 				8A41F4F9CC7E6AF288B173DB /* Pods-Video.debug.xcconfig */,
 				75FA6BDA0F5BB1530A0143A0 /* Pods-Video.release.xcconfig */,
+				739D573B31AC4DB148FD0C13 /* Pods-VideoTests.debug.xcconfig */,
+				CEF1E0D3CE181189CEE50A8F /* Pods-VideoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -235,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCCF43C91CBC66E7CFB5939 /* libPods-Video.a */,
+				14161FA4E4EF40B96612BF26 /* libPods-VideoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C9ED6E242E4EE200784FCC /* Build configuration list for PBXNativeTarget "VideoTests" */;
 			buildPhases = (
+				5F10A2F2A3595FEA2F807281 /* [CP] Check Pods Manifest.lock */,
 				20C9ED53242E4EE200784FCC /* Sources */,
 				20C9ED54242E4EE200784FCC /* Frameworks */,
 				20C9ED55242E4EE200784FCC /* Resources */,
@@ -277,24 +257,6 @@
 			productName = VideoTests;
 			productReference = 20C9ED57242E4EE200784FCC /* VideoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		20C9ED61242E4EE200784FCC /* VideoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20C9ED71242E4EE200784FCC /* Build configuration list for PBXNativeTarget "VideoUITests" */;
-			buildPhases = (
-				20C9ED5E242E4EE200784FCC /* Sources */,
-				20C9ED5F242E4EE200784FCC /* Frameworks */,
-				20C9ED60242E4EE200784FCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20C9ED64242E4EE200784FCC /* PBXTargetDependency */,
-			);
-			name = VideoUITests;
-			productName = VideoUITests;
-			productReference = 20C9ED62242E4EE200784FCC /* VideoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -310,10 +272,6 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					20C9ED56242E4EE200784FCC = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 20C9ED40242E4EE000784FCC;
-					};
-					20C9ED61242E4EE200784FCC = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 20C9ED40242E4EE000784FCC;
 					};
@@ -334,7 +292,6 @@
 			targets = (
 				20C9ED40242E4EE000784FCC /* Video */,
 				20C9ED56242E4EE200784FCC /* VideoTests */,
-				20C9ED61242E4EE200784FCC /* VideoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,16 +314,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20C9ED60242E4EE200784FCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F10A2F2A3595FEA2F807281 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		801DD1C6407B70BE6B72B85C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,14 +395,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20C9ED5E242E4EE200784FCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20C9ED67242E4EE200784FCC /* VideoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -438,11 +402,6 @@
 			isa = PBXTargetDependency;
 			target = 20C9ED40242E4EE000784FCC /* Video */;
 			targetProxy = 20C9ED58242E4EE200784FCC /* PBXContainerItemProxy */;
-		};
-		20C9ED64242E4EE200784FCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20C9ED40242E4EE000784FCC /* Video */;
-			targetProxy = 20C9ED63242E4EE200784FCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -616,10 +575,12 @@
 		};
 		20C9ED6F242E4EE200784FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 739D573B31AC4DB148FD0C13 /* Pods-VideoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D7EXG3334;
 				INFOPLIST_FILE = VideoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,10 +598,12 @@
 		};
 		20C9ED70242E4EE200784FCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF1E0D3CE181189CEE50A8F /* Pods-VideoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D7EXG3334;
 				INFOPLIST_FILE = VideoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,44 +616,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Video.app/Video";
-			};
-			name = Release;
-		};
-		20C9ED72242E4EE200784FCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.VideoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Video;
-			};
-			name = Debug;
-		};
-		20C9ED73242E4EE200784FCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.VideoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Video;
 			};
 			name = Release;
 		};
@@ -720,15 +645,6 @@
 			buildConfigurations = (
 				20C9ED6F242E4EE200784FCC /* Debug */,
 				20C9ED70242E4EE200784FCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20C9ED71242E4EE200784FCC /* Build configuration list for PBXNativeTarget "VideoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20C9ED72242E4EE200784FCC /* Debug */,
-				20C9ED73242E4EE200784FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
