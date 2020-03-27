@@ -14,20 +14,24 @@ struct ContentView: View {
     @ObservedObject var downloadModel = VideoDownloadViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List(viewModel.videos) {video in
-                    NavigationLink(
-                        destination: DetailView(video: video, downloadModel: self.downloadModel)
-                    ) {
-                        VideoRow(viewModel: self.viewModel, video: video)
-                            .onAppear {
+        RefreshableNavigationView(title: "Numbers", action:{
+            self.viewModel.load()
+        }){
+            ForEach(self.viewModel.videos, id: \.self){ video in
+                VStack {
+                        NavigationLink(
+                            destination: DetailView(video: video, downloadModel: self.downloadModel)
+                        ) {
+                            VideoRow(viewModel: self.viewModel, video: video)
+                                .onAppear {
                         }
-                    }
                 }}.navigationBarTitle(Text("Videos"))
+            }
+
         }.onAppear(){
             self.viewModel.load()
         }
+
     }
 }
 
@@ -98,7 +102,6 @@ struct DetailView: View {
 
     
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

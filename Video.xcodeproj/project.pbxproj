@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2000CF40242EB27700AD4A57 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000CF3F242EB27700AD4A57 /* PullToRefreshView.swift */; };
 		20B0A31E242E871700B04044 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A31D242E871700B04044 /* Downloader.swift */; };
 		20B0A320242E879600B04044 /* VideoDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A31F242E879600B04044 /* VideoDownloadModel.swift */; };
 		20B0A328242EA22E00B04044 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A325242EA22E00B04044 /* SessionManager.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		14161FA4E4EF40B96612BF26 /* libPods-VideoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VideoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCCF43C91CBC66E7CFB5939 /* libPods-Video.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Video.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2000CF3F242EB27700AD4A57 /* PullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		20B0A31D242E871700B04044 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		20B0A31F242E879600B04044 /* VideoDownloadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDownloadModel.swift; sourceTree = "<group>"; };
 		20B0A325242EA22E00B04044 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = "../../../../../../Downloads/HLSion-master/Sources/SessionManager.swift"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				20C9ED81242E5C4000784FCC /* VideoRow.swift */,
 				20C9ED88242E7A3700784FCC /* VideoView.swift */,
 				20C9ED8A242E7AA100784FCC /* PlayerUIView.swift */,
+				2000CF3F242EB27700AD4A57 /* PullToRefreshView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				20C9ED7F242E5A4100784FCC /* VideoListModel.swift in Sources */,
 				20B0A328242EA22E00B04044 /* SessionManager.swift in Sources */,
 				20C9ED78242E504000784FCC /* Video.swift in Sources */,
+				2000CF40242EB27700AD4A57 /* PullToRefreshView.swift in Sources */,
 				20C9ED7D242E53EA00784FCC /* VideoRepository.swift in Sources */,
 				20C9ED87242E752F00784FCC /* Database.swift in Sources */,
 				20C9ED89242E7A3700784FCC /* VideoView.swift in Sources */,
