@@ -18,7 +18,6 @@ struct ContentView: View {
                 List(viewModel.videos) {video in
                     VideoRow(viewModel: self.viewModel, video: video)
                         .onAppear {
-//                            self.viewModel.fetchImage(for: user)
                     }
                 }}.navigationBarTitle(Text("Videos"))
         }.onAppear(){

@@ -29,16 +29,7 @@ final class VideoListViewModel: ObservableObject {
         .subscribe(onNext: { vs in
             self.videos = vs
         }, onError: { error in
-            switch error {
-            case ApiError.conflict:
-                print("Conflict error")
-            case ApiError.forbidden:
-                print("Forbidden error")
-            case ApiError.notFound:
-                print("Not found error")
-            default:
-                print("Unknown error:", error)
-            }
+            // TODO: make actions for different error
         })
         .disposed(by: disposeBag)
 
