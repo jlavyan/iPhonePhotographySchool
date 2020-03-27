@@ -8,11 +8,20 @@
 
 import Foundation
 import SwiftUI
-
-struct Video: Hashable, Identifiable, Decodable {
-    var id: String
+import RxSwift
+struct Video: Hashable, Identifiable, Codable {
+    var id: Int
     var name: String
-    var tnumbnail: URL
+    var tnumbnail: String
     var description: String
-    var videoLink: URL
+    var videoLink: String
+    
+    
+    init(dictionary: [String: Any]){
+        id = dictionary["id"] as! Int
+        name = dictionary["name"] as! String
+        tnumbnail = dictionary["thumbnail"] as! String
+        description = dictionary["description"] as! String
+        videoLink = dictionary["video_link"] as! String
+    }
 }
