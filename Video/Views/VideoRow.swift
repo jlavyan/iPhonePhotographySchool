@@ -15,7 +15,7 @@ struct VideoRow: View {
 
     var body: some View {
         HStack {
-            WebImage(url: URL(string: video.tnumbnail))
+            WebImage(url: URL(string: video.thumbnail))
                 .onSuccess { image, cacheType in
                     // Success
                 }

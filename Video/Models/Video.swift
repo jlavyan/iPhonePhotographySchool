@@ -12,7 +12,7 @@ import RxSwift
 struct Video: Hashable, Identifiable, Codable {
     var id: Int
     var name: String
-    var tnumbnail: String
+    var thumbnail: String
     var description: String
     var videoLink: String
     
@@ -20,7 +20,7 @@ struct Video: Hashable, Identifiable, Codable {
     init(dictionary: [String: Any]){
         id = dictionary["id"] as! Int
         name = dictionary["name"] as! String
-        tnumbnail = dictionary["thumbnail"] as! String
+        thumbnail = dictionary["thumbnail"] as! String
         description = dictionary["description"] as! String
         videoLink = dictionary["video_link"] as! String
     }
