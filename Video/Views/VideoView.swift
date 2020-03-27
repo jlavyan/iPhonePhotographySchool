@@ -10,16 +10,22 @@ import SwiftUI
 import AVKit
 
 struct PlayerView: UIViewRepresentable {
-    var url: String
-    init(url: String) {
-        self.url = url
+    var video: Video
+    init(video: Video) {
+        self.video = video
     }
   func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
   }
 
   func makeUIView(context: Context) -> UIView {
     let playerView = PlayerUIView(frame: .zero)
-    playerView.loadUrl(url: url)
+    
+    if let videoPath = Database.loadVideoPath(id: video.videoLink){
+        playerView.loadFileUrl(url: videoPath)
+    }else{
+        playerView.loadUrl(url: video.videoLink)
+    }
+    
     return playerView
   }
 }

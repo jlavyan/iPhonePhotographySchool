@@ -53,8 +53,8 @@ class VideoRepository: Repository{
 
                 case .failure(let e):
                     // TODO: handle error
+                    print(e)
                     observer.onError(VideoRepositoryError.notFound)
-                   self.logError(error: e)
             }
             }
             
@@ -87,10 +87,6 @@ class VideoRepository: Repository{
         }
 
         return [Video]()
-    }
-    
-    private func logError(error: AFError){
-        print("Request error: \(error.localizedDescription)")
     }
     
     

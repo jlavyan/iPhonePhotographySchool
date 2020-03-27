@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		20B0A31E242E871700B04044 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A31D242E871700B04044 /* Downloader.swift */; };
 		20B0A320242E879600B04044 /* VideoDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A31F242E879600B04044 /* VideoDownloadModel.swift */; };
+		20B0A328242EA22E00B04044 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A325242EA22E00B04044 /* SessionManager.swift */; };
+		20B0A329242EA22E00B04044 /* AssetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A326242EA22E00B04044 /* AssetStore.swift */; };
+		20B0A32A242EA22E00B04044 /* HLSion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B0A327242EA22E00B04044 /* HLSion.swift */; };
 		20C9ED45242E4EE000784FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED44242E4EE000784FCC /* AppDelegate.swift */; };
 		20C9ED47242E4EE000784FCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED46242E4EE000784FCC /* SceneDelegate.swift */; };
 		20C9ED49242E4EE000784FCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED48242E4EE000784FCC /* ContentView.swift */; };
@@ -49,6 +52,9 @@
 		1DCCF43C91CBC66E7CFB5939 /* libPods-Video.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Video.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B0A31D242E871700B04044 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		20B0A31F242E879600B04044 /* VideoDownloadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDownloadModel.swift; sourceTree = "<group>"; };
+		20B0A325242EA22E00B04044 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = "../../../../../../Downloads/HLSion-master/Sources/SessionManager.swift"; sourceTree = "<group>"; };
+		20B0A326242EA22E00B04044 /* AssetStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetStore.swift; path = "../../../../../../Downloads/HLSion-master/Sources/AssetStore.swift"; sourceTree = "<group>"; };
+		20B0A327242EA22E00B04044 /* HLSion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HLSion.swift; path = "../../../../../../Downloads/HLSion-master/Sources/HLSion.swift"; sourceTree = "<group>"; };
 		20C9ED41242E4EE000784FCC /* Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Video.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C9ED44242E4EE000784FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C9ED46242E4EE000784FCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20B0A324242EA21200B04044 /* Video helpers */ = {
+			isa = PBXGroup;
+			children = (
+				20B0A326242EA22E00B04044 /* AssetStore.swift */,
+				20B0A327242EA22E00B04044 /* HLSion.swift */,
+				20B0A325242EA22E00B04044 /* SessionManager.swift */,
+			);
+			path = "Video helpers";
+			sourceTree = "<group>";
+		};
 		20C9ED38242E4EE000784FCC = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +215,7 @@
 		20C9ED85242E752000784FCC /* Middlewares */ = {
 			isa = PBXGroup;
 			children = (
+				20B0A324242EA21200B04044 /* Video helpers */,
 				20C9ED86242E752F00784FCC /* Database.swift */,
 				20B0A31D242E871700B04044 /* Downloader.swift */,
 			);
@@ -383,8 +400,11 @@
 				20C9ED47242E4EE000784FCC /* SceneDelegate.swift in Sources */,
 				20B0A31E242E871700B04044 /* Downloader.swift in Sources */,
 				20C9ED82242E5C4000784FCC /* VideoRow.swift in Sources */,
+				20B0A32A242EA22E00B04044 /* HLSion.swift in Sources */,
 				20C9ED49242E4EE000784FCC /* ContentView.swift in Sources */,
+				20B0A329242EA22E00B04044 /* AssetStore.swift in Sources */,
 				20C9ED7F242E5A4100784FCC /* VideoListModel.swift in Sources */,
+				20B0A328242EA22E00B04044 /* SessionManager.swift in Sources */,
 				20C9ED78242E504000784FCC /* Video.swift in Sources */,
 				20C9ED7D242E53EA00784FCC /* VideoRepository.swift in Sources */,
 				20C9ED87242E752F00784FCC /* Database.swift in Sources */,

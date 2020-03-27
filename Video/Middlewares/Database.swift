@@ -12,13 +12,22 @@ class Database{
     static let storedDataUserDefaultsKey = "storedDataUserDefaultsKey"
 
     static func save(dictionary: [String: Any]){
-
         UserDefaults.standard.set(dictionary, forKey: storedDataUserDefaultsKey)
         UserDefaults.standard.synchronize()
     }
     
+    static func saveVideoPath(id: String, path: String){
+        UserDefaults.standard.set(path, forKey: id)
+        UserDefaults.standard.synchronize()
+    }
+
+    static func loadVideoPath(id: String) -> String?{
+        return UserDefaults.standard.string(forKey: id)
+    }
+
+    
     static func loadDictionary() -> [String: Any]?{
-        UserDefaults.standard.dictionary(forKey: storedDataUserDefaultsKey)
+        return UserDefaults.standard.dictionary(forKey: storedDataUserDefaultsKey)
     }
 
 }

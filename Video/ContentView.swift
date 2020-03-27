@@ -54,7 +54,7 @@ struct DetailView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                PlayerView(url: video.videoLink).frame(height: 250)
+                PlayerView(video: video).frame(height: 250)
                 Text(video.name).bold().font(Font.system(size: 20)).padding(10)
                 Text(video.description).padding(10)
                 Spacer()
@@ -69,12 +69,33 @@ struct DetailView: View {
     
     
     func loadTitle(video: Video) -> String{
+        if let _ = Database.loadVideoPath(id: video.videoLink){
+            return ""
+        }
+        
         guard let state = self.downloadModel.states[video] else{
             return "Download Video"
         }
         
         return state.title()
     }
+    
+    func loadImage(video: Video) -> Image?{
+        if let _ = Database.loadVideoPath(id: video.videoLink){
+            return nil
+        }
+        
+        guard let state = self.downloadModel.states[video] else{
+            return Image(systemName: "square.and.arrow.down")
+        }
+        
+        if state == .initial{
+            return Image(systemName: "square.and.arrow.down")
+        }else {
+            return nil
+        }
+    }
+
     
 }
 

@@ -60,6 +60,7 @@ final class VideoDownloadViewModel: ObservableObject {
     }
 
     func cancel(video: Video) {
+        pendingDownloads[video]?.cancel()
         states[video] = nil
         pendingDownloads[video] = nil;
     }

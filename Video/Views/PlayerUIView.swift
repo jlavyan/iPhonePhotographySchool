@@ -27,7 +27,18 @@ class PlayerUIView: UIView {
     
    func loadUrl(url urlString: String){
         let url = URL(string: urlString)!
-        let player = AVPlayer(url: url)
+    
+        load(universalUrl: url)
+    }
+    
+    func loadFileUrl(url urlString: String){
+         let url = URL(fileURLWithPath: urlString)
+     
+         load(universalUrl: url)
+     }
+    
+    private func load(universalUrl: URL){
+        let player = AVPlayer(url: universalUrl)
 
         player.play()
 
