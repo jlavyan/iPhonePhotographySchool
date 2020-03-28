@@ -49,7 +49,7 @@ class VideoTests: XCTestCase {
 
         let downloader = Downloader()
         let dictionary: [String: Any] = ["id": 1, "name": "hey", "thumbnail": "asd",
-                                         "description": "any description", "video_link": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"]
+                                         "description": "any description", "video_link": "http://cdnapi.kaltura.com/p/1878761/sp/187876100/playManifest/entryId/1_usagz19w/flavorIds/1_5spqkazq,1_nslowvhp,1_boih5aji,1_qahc37ag/format/applehttp/protocol/http/a.m3u8"]
         let video = Video(dictionary: dictionary)
         
         downloader.downloadData(video: video).observeOn(MainScheduler.instance)

@@ -4,7 +4,7 @@ use_frameworks!
 
 dynamic_frameworks = ['Alamofire']
 
-# make all the other frameworks into static frameworks by overriding the static_framework? function to return true
+# We use this functionality since RXTest must be dynamic framework instead of Alamofire
 pre_install do |installer|
     installer.pod_targets.each do |pod|
         if !dynamic_frameworks.include?(pod.name)

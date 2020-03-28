@@ -19,14 +19,6 @@ class Downloader: NSObject, AVAssetDownloadDelegate{
     
     func downloadData(video: Video) -> Observable<String>{
        return Observable<String>.create { observer in
-        guard let fileURL = try? FileManager().createTemporaryDirectory(id: String(video.id)) else{
-            observer.onError(VideoRepositoryError.notFound)
-            return Disposables.create {}
-        }
-        if FileManager.default.fileExists(atPath: fileURL.path) {
-            try! FileManager.default.removeItem(at: fileURL)
-        }
-
         if let url = URL(string: video.videoLink){
 
         self.hslion = HLSion(url: url, name: String(video.id)).download { (progressPercentage) in
