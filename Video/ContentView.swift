@@ -22,7 +22,7 @@ struct ContentView: View {
                         NavigationLink(
                             destination: DetailView(video: video, downloadModel: self.downloadModel)
                         ) {
-                            VideoRow(viewModel: self.viewModel, video: video)
+                            VideoRow(video: video)
                                 .onAppear {
                         }
                 }}.navigationBarTitle(Text("Videos"))
@@ -71,6 +71,33 @@ struct DetailView: View {
     }
     
     
+    private func state(video: Video) -> LoadingState{
+        if let _ = Database.loadVideoPath(id: video.videoLink){
+            return LoadingState.loaded
+        }
+
+        guard let state = self.downloadModel.states[video] else{
+            return LoadingState.initial
+        }
+
+        return state
+    }
+    
+    private func loadTitle(video: Video) -> String{
+        return state(video: video).title()
+    }
+    
+    private func loadImage(video: Video) -> some View{
+        let image = Image(systemName: "square.and.arrow.down")
+        switch state(video: video) {
+        case .initial:
+            return AnyView(image.foregroundColor(Color.blue))
+        case .loaded:
+            return AnyView(EmptyView())
+        case .loading:
+            return AnyView(EmptyView())
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
