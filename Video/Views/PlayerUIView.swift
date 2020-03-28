@@ -32,8 +32,8 @@ class PlayerUIView: UIView {
     }
     
     func loadFileUrl(url urlString: String){
-         let url = URL(fileURLWithPath: urlString)
-     
+         let url = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent(urlString)
+
          load(universalUrl: url)
      }
     
