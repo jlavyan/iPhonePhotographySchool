@@ -1,27 +1,41 @@
 platform :ios, '13.0'
 
+use_frameworks!
+
+dynamic_frameworks = ['Alamofire']
+
+# make all the other frameworks into static frameworks by overriding the static_framework? function to return true
+pre_install do |installer|
+    installer.pod_targets.each do |pod|
+        if !dynamic_frameworks.include?(pod.name)
+            puts "Overriding the static_framework? method for #{pod.name}"
+            def pod.static_framework?;
+                true
+            end
+        end
+    end
+end
+
+def shared_pods
+    pod 'Alamofire'
+    pod 'SDWebImage'
+    pod 'SDWebImageSwiftUI'
+    pod 'ReachabilitySwift',  '~> 5.0.0'
+end
+
+
 target 'Video' do
-  use_modular_headers!
-
-	pod 'Alamofire', '~> 5.0'
+  shared_pods
+  
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
-  pod 'SDWebImage'
-  pod 'SDWebImageSwiftUI'
-  pod 'ReachabilitySwift',  '~> 5.0.0'
+  
+  target 'VideoTests' do
+    pod 'RxBlocking', '~> 5'
+    pod 'RxTest', '~> 5'
+  end
 
 end
 
-target 'VideoTests' do
-  use_modular_headers!
-
-  pod 'Alamofire', '~> 5.0'
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
-  pod 'SDWebImage'
-  pod 'SDWebImageSwiftUI'
-  pod 'ReachabilitySwift',  '~> 5.0.0'
-
-end
 
 

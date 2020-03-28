@@ -7,8 +7,8 @@
 //
 
 import XCTest
-import Alamofire
 import RxSwift
+import RxTest
 
 @testable import Video
 
@@ -22,22 +22,29 @@ class VideoTests: XCTestCase {
         super.tearDown()
     }
 
-    func testLoadingData() {
-        let disposeBag = DisposeBag()
 
-        VideoRepository().videoList().observeOn(MainScheduler.instance)
-        .subscribe(onNext: { vs in
-            if(vs.count == 0){
-                XCTAssertEqual(vs.count == 0, true, "Error on load data via internet")
-            }
-        }, onError: { error in
-            XCTAssertEqual(true, true, "Test passes with error \(error)")
-        })
-        .disposed(by: disposeBag)
+    func testLoadingData() {
+        let expectation = XCTestExpectation(description: "Load video JSON")
+
+        let scheduler = TestScheduler(initialClock: 0)
+        let results = scheduler.createObserver([Video].self)
+        
+        let observer = VideoRepository().videoList()
+        observer.subscribe(results).disposed(by: DisposeBag())
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
+            XCTAssertTrue(results.events.first?.value.element?.count != 0)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 7.0)
     }
     
     
+    
     func testDownloadFile() {
+        let expectation = XCTestExpectation(description: "Load video JSON")
+
         let disposeBag = DisposeBag()
 
         let downloader = Downloader()
@@ -47,11 +54,14 @@ class VideoTests: XCTestCase {
         
         downloader.downloadData(video: video).observeOn(MainScheduler.instance)
         .subscribe(onNext: { vs in
-            XCTAssertEqual(vs.count == 0, true, "Error on download hls")
+            expectation.fulfill()
         }, onError: { error in
-            XCTAssertEqual(true, true, "Test passes with error \(error)")
+            XCTAssertTrue(false)
         })
         .disposed(by: disposeBag)
+        
+        
+        wait(for: [expectation], timeout: 600.0)
     }
 
 

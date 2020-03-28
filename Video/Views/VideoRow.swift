@@ -10,7 +10,6 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct VideoRow: View {
-    @ObservedObject var viewModel: VideoListViewModel
     @State var video: Video
 
     var body: some View {

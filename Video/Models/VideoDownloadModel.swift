@@ -20,14 +20,14 @@ enum LoadingState{
         case .initial:
                 return "Download Video"
         case .loading:
-                return "Cancel Video"
+                return "Cancel download"
         case .loaded:
                 return ""
         }
     }
 }
 
-final class VideoDownloadViewModel: ObservableObject {
+final class VideoDownloadModel: ObservableObject {
     var pendingDownloads = [Video: Downloader]()
     
     private let disposeBag = DisposeBag()

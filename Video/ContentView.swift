@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var dates = [Date]()
-    @ObservedObject var viewModel = VideoListViewModel()
-    @ObservedObject var downloadModel = VideoDownloadViewModel()
+    @ObservedObject var viewModel = VideoListModel()
+    @ObservedObject var downloadModel = VideoDownloadModel()
     
     var body: some View {
         RefreshableNavigationView(title: "Numbers", action:{
@@ -31,15 +31,14 @@ struct ContentView: View {
         }.onAppear(){
             self.viewModel.load()
         }
-
     }
 }
 
 struct DetailView: View {
-    @ObservedObject var downloadModel: VideoDownloadViewModel;
+    @ObservedObject var downloadModel: VideoDownloadModel;
 
     var video: Video
-    init(video: Video, downloadModel: VideoDownloadViewModel){
+    init(video: Video, downloadModel: VideoDownloadModel){
         self.video = video
         self.downloadModel = downloadModel
     }
@@ -66,40 +65,11 @@ struct DetailView: View {
             }.navigationBarTitle(Text("")).navigationBarItems(trailing:
                 HStack{ Button(loadTitle(video: video)) {
                     self.action(video: self.video)
-                    }; Image(systemName: "square.and.arrow.down")
+                    }; loadImage(video: video)
                 }
             ).edgesIgnoringSafeArea([.top, .bottom])
     }
     
-    
-    func loadTitle(video: Video) -> String{
-        if let _ = Database.loadVideoPath(id: video.videoLink){
-            return ""
-        }
-        
-        guard let state = self.downloadModel.states[video] else{
-            return "Download Video"
-        }
-        
-        return state.title()
-    }
-    
-    func loadImage(video: Video) -> Image?{
-        if let _ = Database.loadVideoPath(id: video.videoLink){
-            return nil
-        }
-        
-        guard let state = self.downloadModel.states[video] else{
-            return Image(systemName: "square.and.arrow.down")
-        }
-        
-        if state == .initial{
-            return Image(systemName: "square.and.arrow.down")
-        }else {
-            return nil
-        }
-    }
-
     
 }
 
