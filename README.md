@@ -20,7 +20,7 @@
     This is sample app with RXswift, SwiftUI and Combine framework!
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/jlavyan/iPhonePhotographySchool/issues">Request Feature</a>
   </p>
 </p>
 
@@ -40,7 +40,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot][product-screenshot](https://example.com)
+
 
 In this sample app we use reactive programming features for update data with streams and update ui with Combine frameowke .
 
@@ -61,7 +62,7 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-For build app you need install PodFile and run from XCode
+For build app you need install Podfile and run from XCode
 
 ### Prerequisites
 
