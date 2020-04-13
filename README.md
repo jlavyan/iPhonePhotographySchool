@@ -61,7 +61,7 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-For buil app you need install PodFile and run from XCode
+For build app you need install PodFile and run from XCode
 
 ### Prerequisites
 
