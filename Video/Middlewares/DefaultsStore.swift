@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Database{
+class DefaultsStore{
     static let storedDataUserDefaultsKey = "storedDataUserDefaultsKey"
 
     static func save(dictionary: [String: Any]){

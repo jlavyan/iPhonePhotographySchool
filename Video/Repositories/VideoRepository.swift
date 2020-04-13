@@ -37,14 +37,13 @@ class VideoRepository: Repository{
             let request = AF.request(self.path(), method: .get, parameters: nil, encoding: URLEncoding.queryString, headers: nil)
          .validate()
          .responseJSON { response in
-
             switch (response.result) {
                case .success( _):
                    var videos = [Video]()
                    if let fullDictionary = response.value as? [String: Any] {
                     
                     // Save Data
-                    Database.save(dictionary: fullDictionary)
+                    DefaultsStore.save(dictionary: fullDictionary)
                     
                     videos = self.loadVideos(dictionary: fullDictionary)
                    }
@@ -66,7 +65,7 @@ class VideoRepository: Repository{
     
     private func loadOffline() -> Observable<[Video]>{
         return Observable<[Video]>.create { observer in
-            guard let dictionary = Database.loadDictionary() else{
+            guard let dictionary = DefaultsStore.loadDictionary() else{
                 observer.onError(VideoRepositoryError.noData)
                 return Disposables.create {}
             }

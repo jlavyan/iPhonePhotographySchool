@@ -25,7 +25,7 @@
 		20C9ED7D242E53EA00784FCC /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED7C242E53EA00784FCC /* VideoRepository.swift */; };
 		20C9ED7F242E5A4100784FCC /* VideoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED7E242E5A4100784FCC /* VideoListModel.swift */; };
 		20C9ED82242E5C4000784FCC /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED81242E5C4000784FCC /* VideoRow.swift */; };
-		20C9ED87242E752F00784FCC /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED86242E752F00784FCC /* Database.swift */; };
+		20C9ED87242E752F00784FCC /* DefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED86242E752F00784FCC /* DefaultsStore.swift */; };
 		20C9ED89242E7A3700784FCC /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED88242E7A3700784FCC /* VideoView.swift */; };
 		20C9ED8B242E7AA100784FCC /* PlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9ED8A242E7AA100784FCC /* PlayerUIView.swift */; };
 		7E269D041EA39523B747BDDF /* Pods_Video.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901939250E4E46919CF784E4 /* Pods_Video.framework */; };
@@ -66,7 +66,7 @@
 		20C9ED7C242E53EA00784FCC /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
 		20C9ED7E242E5A4100784FCC /* VideoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListModel.swift; sourceTree = "<group>"; };
 		20C9ED81242E5C4000784FCC /* VideoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRow.swift; sourceTree = "<group>"; };
-		20C9ED86242E752F00784FCC /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		20C9ED86242E752F00784FCC /* DefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStore.swift; sourceTree = "<group>"; };
 		20C9ED88242E7A3700784FCC /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		20C9ED8A242E7AA100784FCC /* PlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIView.swift; sourceTree = "<group>"; };
 		20F22E1D242F36AD00A68C0B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				20B0A324242EA21200B04044 /* Video helpers */,
-				20C9ED86242E752F00784FCC /* Database.swift */,
+				20C9ED86242E752F00784FCC /* DefaultsStore.swift */,
 				20B0A31D242E871700B04044 /* Downloader.swift */,
 			);
 			path = Middlewares;
@@ -425,7 +425,7 @@
 				20C9ED78242E504000784FCC /* Video.swift in Sources */,
 				2000CF40242EB27700AD4A57 /* PullToRefreshView.swift in Sources */,
 				20C9ED7D242E53EA00784FCC /* VideoRepository.swift in Sources */,
-				20C9ED87242E752F00784FCC /* Database.swift in Sources */,
+				20C9ED87242E752F00784FCC /* DefaultsStore.swift in Sources */,
 				20C9ED89242E7A3700784FCC /* VideoView.swift in Sources */,
 				20B0A320242E879600B04044 /* VideoDownloadModel.swift in Sources */,
 				20C9ED7B242E53DD00784FCC /* Repository.swift in Sources */,

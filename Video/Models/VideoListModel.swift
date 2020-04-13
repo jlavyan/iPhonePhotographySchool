@@ -11,9 +11,10 @@ import Combine
 import RxSwift
 
 final class VideoListModel: ObservableObject {
-    var videoRepository = VideoRepository()
-    
     @Published private(set) var videos = [Video]()
+
+    private var videoRepository = VideoRepository()
+    
     private let disposeBag = DisposeBag()
 
     private var searchCancellable: Cancellable? {

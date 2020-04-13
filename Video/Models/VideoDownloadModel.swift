@@ -18,20 +18,20 @@ enum LoadingState{
     func title() -> String{
         switch self{
         case .initial:
-                return "Download Video"
+            return "Download Video"
         case .loading:
-                return "Cancel download"
+            return "Cancel download"
         case .loaded:
-                return ""
+            return ""
         }
     }
 }
 
 final class VideoDownloadModel: ObservableObject {
-    var pendingDownloads = [Video: Downloader]()
-    
-    private let disposeBag = DisposeBag()
     @Published private(set) var states = [Video: LoadingState]()
+
+    private var pendingDownloads = [Video: Downloader]()
+    private let disposeBag = DisposeBag()
 
     private var searchCancellable: Cancellable? {
         didSet { oldValue?.cancel() }
@@ -46,8 +46,10 @@ final class VideoDownloadModel: ObservableObject {
     }
     
     func download(video: Video) {
+        // Change state
         states[video] = .loading
         
+        // Change state after download
         let downloader = Downloader()
         downloader.downloadData(video: video).observeOn(MainScheduler.instance)
         .subscribe(onNext: { vs in
@@ -60,10 +62,11 @@ final class VideoDownloadModel: ObservableObject {
     }
 
     func cancel(video: Video) {
+        // Cancel download
         pendingDownloads[video]?.cancel()
+        
+        // Clean data
         states[video] = nil
         pendingDownloads[video] = nil;
     }
-
-
 }

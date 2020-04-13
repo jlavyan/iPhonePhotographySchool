@@ -16,7 +16,6 @@ struct Video: Hashable, Identifiable, Codable {
     var description: String
     var videoLink: String
     
-    
     init(dictionary: [String: Any]){
         id = dictionary["id"] as! Int
         name = dictionary["name"] as! String

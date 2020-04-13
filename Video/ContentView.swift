@@ -72,7 +72,7 @@ struct DetailView: View {
     
     
     private func state(video: Video) -> LoadingState{
-        if let _ = Database.loadVideoPath(id: video.videoLink){
+        if let _ = DefaultsStore.loadVideoPath(id: video.videoLink){
             return LoadingState.loaded
         }
 

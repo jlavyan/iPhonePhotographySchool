@@ -20,7 +20,7 @@ struct PlayerView: UIViewRepresentable {
   func makeUIView(context: Context) -> UIView {
     let playerView = PlayerUIView(frame: .zero)
     
-    if let videoPath = Database.loadVideoPath(id: video.videoLink){
+    if let videoPath = DefaultsStore.loadVideoPath(id: video.videoLink){
         playerView.loadFileUrl(url: videoPath)
     }else{
         playerView.loadUrl(url: video.videoLink)
