@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Product Name Screen Shot][product-screenshot](https://example.com)
+![Product Name Screen Shot][product-screenshot]
 
 
 In this sample app we use reactive programming features for update data with streams and update ui with Combine frameowke .
