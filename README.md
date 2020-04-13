@@ -18,7 +18,7 @@
 
   <p align="center">
     This is sample app with RXswift, SwiftUI and Combine framework!
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/jlavyan/iPhonePhotographySchool/issues">Report Bug</a>
     ·
     <a href="https://github.com/jlavyan/iPhonePhotographySchool/issues">Request Feature</a>
   </p>
